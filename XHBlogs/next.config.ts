@@ -4,13 +4,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/blog',
   typescript: {
-    // 忽略 TypeScript 构建报错
     ignoreBuildErrors: true,
   },
   eslint: {
-    // 忽略 ESLint 语法报错
     ignoreDuringBuilds: true,
   },
 };
