@@ -1,4 +1,4 @@
-name: Deploy Next.js site to Pages
+Name: Deploy Next.js site to Pages
 
 on:
   push:
@@ -29,11 +29,17 @@ jobs:
           node-version: "20"
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        with:
+          # 显式设为空，防止自动注入 /blog 子路径
+          static_site_generator: next
       - name: Install dependencies
         working-directory: ./XHBlogs
         run: npm ci || npm install
       - name: Build site
         working-directory: ./XHBlogs
+        env:
+          # 强制设置环境变量为空
+          NEXT_PUBLIC_BASE_PATH: ""
         run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
