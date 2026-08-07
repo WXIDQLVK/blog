@@ -30,13 +30,15 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Install dependencies
+        working-directory: ./XHBlogs
         run: npm ci || npm install
       - name: Build site
+        working-directory: ./XHBlogs
         run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./XHBlogs/out
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
