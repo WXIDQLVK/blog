@@ -1,19 +1,11 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  // 🚨 核心修改 1：关掉纯静态导出，让 Vercel 帮你把 API 跑起来！
-  // output: 'export',
-
-  // 🚨 核心修改 2：Vercel 不需要强制加斜杠，关掉它能避免很多 API 路径匹配错误
-  // trailingSlash: true,
-
-  // 下面这些可以保留
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
   images: {
     unoptimized: true,
   },
-  typescript: {
-    ignoreBuildErrors: true, // 忽略 TS 错误，方便快速部署
-  },
+  // 因为你的项目在 blog/XHBlogs 子路径下，所以必须加上 basePath
+  basePath: '/blog',
 };
 
 export default nextConfig;
