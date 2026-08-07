@@ -1,4 +1,4 @@
-Name: Deploy Next.js site to Pages
+name: Deploy Next.js site to Pages
 
 on:
   push:
