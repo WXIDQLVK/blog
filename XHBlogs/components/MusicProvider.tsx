@@ -70,7 +70,7 @@ export function MusicProvider({ children }: { children: ReactNode }) {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [lyrics, setLyrics] = useState<{ time: number; text: string }[]>([]);
-  const [currentLyric, setCurrentLyric] = useState("正在连接高可用神经云端...");
+  const [currentLyric, setCurrentLyric] = useState("正在加载本地音乐...");
   const [isLoading, setIsLoading] = useState(true);
 
   // 🌟 2. 新增音量和播放模式状态
@@ -82,35 +82,24 @@ export function MusicProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     let isMounted = true;
-    const fetchMusicData = async () => {
-      try {
-        const res = await fetch(`/api/music?ids=${siteConfig.cloudMusicIds.join(',')}`);
-        const rawResults = await res.json();
-
-        const mergedPlaylist = rawResults
-          .filter((song: any) => song && song.url && !song.error)
-          .map((song: any) => ({
-            id: song.id || Math.random().toString(),
-            title: song.name || '未知歌曲',
-            artist: song.artist || song.author || '未知歌手',
-            cover: song.cover || song.pic || 'https://bu.dusays.com/2026/03/24/69c24230a5ff8.jpg',
-            src: song.url,
-            lrcUrl: null,
-            lyrics: song.lrc ? parseLrc(song.lrc) : []
-          }));
-
-        if (isMounted) {
-          if (mergedPlaylist.length > 0) setPlaylist(mergedPlaylist);
-          else setCurrentLyric("云端链路受阻");
-          setIsLoading(false);
-        }
-      } catch (error) {
-        if (isMounted) { setCurrentLyric("网络初始化失败"); setIsLoading(false); }
+    
+    // 🎵 使用本地音乐配置
+    const localPlaylist = [
+      {
+        id: "1",
+        title: "无名的人",
+        artist: "毛不易",
+        cover: "/69c1e38ac1846.jpg",     // 直接使用你的头像作为封面
+        src: "/wuming.mp3",               // 请确保在 public 里上传了名为 wuming.mp3 的音频
+        lrcUrl: "/wuming.lrc",            // 如果有歌词请上传 wuming.lrc，没有可改成 null
+        lyrics: []
       }
-    };
+    ];
 
-    if (siteConfig.cloudMusicIds?.length > 0) fetchMusicData();
-    else setIsLoading(false);
+    if (isMounted) {
+      setPlaylist(localPlaylist);
+      setIsLoading(false);
+    }
 
     return () => { isMounted = false; };
   }, []);
@@ -150,7 +139,7 @@ export function MusicProvider({ children }: { children: ReactNode }) {
       }
     }
     return () => { isMounted = false; };
-  }, [currentIndex, playlist.length]); // 移除 playlist 依赖防止无限循环，只依赖长度
+  }, [currentIndex, playlist.length]);
 
   // 🌟 4. 同步音量到 audio 元素
   useEffect(() => {
@@ -187,7 +176,7 @@ export function MusicProvider({ children }: { children: ReactNode }) {
   // 🌟 6. 暴露直接播放指定歌曲的方法
   const playSong = (index: number) => {
     setCurrentIndex(index);
-    if (!isPlaying) setIsPlaying(true); // 保证切歌后自动播放
+    if (!isPlaying) setIsPlaying(true);
   };
 
   const handleTimeUpdate = () => {
@@ -244,9 +233,9 @@ export function MusicProvider({ children }: { children: ReactNode }) {
   return (
     <MusicContext.Provider value={{
         playlist, currentIndex, currentSong, isPlaying, progress, currentTime, duration, currentLyric, isLoading,
-        volume, isMuted, playMode, // 暴露新状态
+        volume, isMuted, playMode,
         togglePlay, nextSong, prevSong, handleSeek,
-        playSong, setVolume, toggleMute, togglePlayMode // 暴露新方法
+        playSong, setVolume, toggleMute, togglePlayMode
     }}>
       {children}
       {currentSong && (
@@ -254,7 +243,7 @@ export function MusicProvider({ children }: { children: ReactNode }) {
           ref={audioRef}
           src={currentSong.src}
           onTimeUpdate={handleTimeUpdate}
-          onEnded={handleEnded} // 使用我们重写的结束处理
+          onEnded={handleEnded}
           onLoadedMetadata={handleTimeUpdate}
         />
       )}
