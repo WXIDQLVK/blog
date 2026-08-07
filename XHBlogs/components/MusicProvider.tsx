@@ -83,15 +83,33 @@ export function MusicProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     let isMounted = true;
     
-    // 🎵 使用本地音乐配置
+    // 🎵 使用本地音乐配置（已更新包含三首歌）
     const localPlaylist = [
       {
         id: "1",
         title: "无名的人",
         artist: "毛不易",
-        cover: "/69c1e38ac1846.jpg",     // 直接使用你的头像作为封面
-        src: "/wuming.mp3",               // 请确保在 public 里上传了名为 wuming.mp3 的音频
-        lrcUrl: "/wuming.lrc",            // 如果有歌词请上传 wuming.lrc，没有可改成 null
+        cover: "/69c1e38ac1846.jpg",     
+        src: "/wuming.mp3",               
+        lrcUrl: "/wuming.lrc",            
+        lyrics: []
+      },
+      {
+        id: "2",
+        title: "暮色回响",
+        artist: "张韶涵",
+        cover: "/69c1e38ac1846.jpg",     
+        src: "/mosehuixiang.mp3",         
+        lrcUrl: "/mosehuixiang.lrc",      
+        lyrics: []
+      },
+      {
+        id: "3",
+        title: "兰亭序",
+        artist: "周杰伦",
+        cover: "/69c1e38ac1846.jpg",     
+        src: "/lantingxu.mp3",            
+        lrcUrl: "/lantingxu.lrc",         
         lyrics: []
       }
     ];
