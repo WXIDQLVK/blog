@@ -5,7 +5,7 @@ export const siteConfig = {
   title: "个人博客",
   faviconUrl: "/69c1e38ac1846.jpg",
   authorName: "谢子杰",
-  bio: "在代码、学术与分子动力学模拟间穿梭的普通人。近期正埋头于 GROMACS 模拟研究与神经网络计算。",
+  bio: "在代码、学术与分子动力学模拟间穿梭的普通人。iOS逆向工程师。",
 
   navTitle: "谢子杰",
 
