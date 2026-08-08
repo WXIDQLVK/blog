@@ -48,9 +48,9 @@ export const siteConfig = {
   // 👇 【新增】：全局背景弹幕配置
   danmakuList: ["在干嘛呢？", "有笨蛋嘛？", "前方高能反应！", "GROMACS 跑起来了吗？", "MD 模拟什么时候才能出图啊", "Graph Neural Networks 炼丹中...", "BUG 修复进度 99%", "今天背单词了吗？", "Tailwind CSS 拯救前端", "写算法中", "睡大觉中", "到底在干嘛？"],
   gitalkConfig: {
-    clientID: "0v23lioggs35RtFXyJ9u",
-    clientSecret: "e0b34d738b924a6de4bcfa11644e87decbca612",
-    repo: "wxidqlvk.github.io", // 修复：已改为正确的仓库名
+    clientID: "Ov23lilsJzCV5sDiSfQg",
+    clientSecret: "757f846357f94454029d2b2bca5b9aee24f1e236",
+    repo: "wxidqlvk.github.io",
     owner: "wxidqlvk",
     admin: ["wxidqlvk"],
   },
