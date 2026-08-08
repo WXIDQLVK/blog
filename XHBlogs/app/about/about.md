@@ -11,10 +11,13 @@ description: ''
 
 你好，我是谢子杰
 
-一名专注于 Apple 生态的软件开发者，热爱 iOS、macOS 以及现代化应用开发技术。
-
-主要关注 Swift、SwiftUI、Web 技术与 Apple 平台应用体验设计，喜欢探索系统能力、开发工具以及数字产品的创新方式。
-
-通过持续学习与实践，致力于打造简洁、高效、有温度的软件作品，并记录开发过程中的技术分享与个人思考。
+爱好和特长有很多，擅长
+word、excel、ppt、wind等
+软件的安装与卸载，精通
+PE、PS、PB、DCF、PEG
+等单词的拼写，熟悉
+Windows、Linux、Mac、
+Android、IOS、WP8等系统
+的开关机。
 
 **欢迎各位朋友联系交流~**
