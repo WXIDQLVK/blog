@@ -5,7 +5,7 @@ export const siteConfig = {
   title: "个人博客",
   faviconUrl: "/69c1e38ac1846.jpg",
   authorName: "谢子杰",
-  bio: "热爱苹果生态与前沿应用开发的开发者，熟悉 Swift与iOS系统特性，致力于打造兼具性能与优秀体验的软件工具",
+  bio: "热爱苹果生态与前沿应用开发的一个普通人，致力于打造兼具性能与优秀体验的软件工具",
 
   navTitle: "谢子杰",
 
