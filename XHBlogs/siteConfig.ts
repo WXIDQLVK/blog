@@ -4,10 +4,10 @@ export const siteConfig = {
   // 1. 网站标题与博主信息
   title: "个人博客",
   faviconUrl: "/69c1e38ac1846.jpg",
-  authorName: "谢子杰",
+  authorName: "玩家名六个字",
   bio: "热爱苹果生态与前沿应用开发的普通人，致力打造兼具性能与优秀体验的软件工具",
 
-  navTitle: "谢子杰",
+  navTitle: "玩家名六个字",
 
   // 👇 【新增】导航栏中间的那个后缀/分隔符（默认是 の）
   navSuffix: "の",
@@ -66,6 +66,6 @@ export const siteConfig = {
     maxOutputTokens: 150,
     temperature: 0.85,
   },
-  friendLinkApplyFormat: "名称：谢子杰の宝藏之地\n简介：今天我也要学习吗\n链接：https://www.xinghuisama.top\n头像：https://bu.dusays.com/2026/03/24/69c1e38ac1846.jpg",
+  friendLinkApplyFormat: "名称：我の宝藏之地\n简介：今天我也要学习吗\n链接：https://www.xinghuisama.top\n头像：https://bu.dusays.com/2026/03/24/69c1e38ac1846.jpg",
   enableLevelSystem: true,
 };
