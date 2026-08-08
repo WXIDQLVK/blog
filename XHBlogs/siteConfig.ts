@@ -50,7 +50,7 @@ export const siteConfig = {
   gitalkConfig: {
     clientID: "0v23lioggs35RtFXyJ9u",
     clientSecret: "e0b34d738b924a6de4bcfa11644e87decbca612",
-    repo: "XHBlogs",
+    repo: "wxidqlvk.github.io", // 修复：已改为正确的仓库名
     owner: "wxidqlvk",
     admin: ["wxidqlvk"],
   },
