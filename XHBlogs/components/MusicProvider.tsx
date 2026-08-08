@@ -33,13 +33,13 @@ function parseLrc(lrcText: string) {
   return result.sort((a, b) => a.time - b.time);
 }
 
-// 🌟 1. 扩充 Context 类型，加入 MusicPage 需要的所有属性
+// 🌟 1. 扩充 Context 类型
 type PlayMode = 'loop' | 'single' | 'random';
 
 interface MusicContextType {
   playlist: any[];
   currentIndex: number;
-  currentSong: any; // 扩展了 lyrics 属性
+  currentSong: any;
   isPlaying: boolean;
   progress: number;
   currentTime: number;
@@ -73,7 +73,6 @@ export function MusicProvider({ children }: { children: ReactNode }) {
   const [currentLyric, setCurrentLyric] = useState("正在加载本地音乐...");
   const [isLoading, setIsLoading] = useState(true);
 
-  // 🌟 2. 新增音量和播放模式状态
   const [volume, setVolumeState] = useState(1);
   const [isMuted, setIsMuted] = useState(false);
   const [playMode, setPlayMode] = useState<PlayMode>('loop');
@@ -83,7 +82,7 @@ export function MusicProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     let isMounted = true;
     
-    // 🎵 使用本地音乐配置（已更新包含三首歌）
+    // 🎵 本地音乐配置（已更新包含四首歌，请确保所有文件名均为小写）
     const localPlaylist = [
       {
         id: "1",
@@ -98,7 +97,7 @@ export function MusicProvider({ children }: { children: ReactNode }) {
         id: "2",
         title: "暮色回响",
         artist: "张韶涵",
-        cover: "/69c1e38ac1846.jpg",     
+        cover: "/mosehuixiang.jpg",     
         src: "/mosehuixiang.mp3",         
         lrcUrl: "/mosehuixiang.lrc",      
         lyrics: []
@@ -107,9 +106,18 @@ export function MusicProvider({ children }: { children: ReactNode }) {
         id: "3",
         title: "兰亭序",
         artist: "周杰伦",
-        cover: "/69c1e38ac1846.jpg",     
+        cover: "/lantingxu.jpg",        
         src: "/lantingxu.mp3",            
         lrcUrl: "/lantingxu.lrc",         
+        lyrics: []
+      },
+      {
+        id: "4",
+        title: "花海",
+        artist: "周杰伦",
+        cover: "/huahai.jpg",           
+        src: "/huahai.mp3",            
+        lrcUrl: "/huahai.lrc",         
         lyrics: []
       }
     ];
@@ -159,7 +167,6 @@ export function MusicProvider({ children }: { children: ReactNode }) {
     return () => { isMounted = false; };
   }, [currentIndex, playlist.length]);
 
-  // 🌟 4. 同步音量到 audio 元素
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.volume = isMuted ? 0 : volume;
@@ -174,7 +181,6 @@ export function MusicProvider({ children }: { children: ReactNode }) {
     }
   };
 
-  // 🌟 5. 重写 nextSong，加入对随机模式的处理
   const nextSong = () => {
     if (playMode === 'random') {
       setCurrentIndex(Math.floor(Math.random() * playlist.length));
@@ -191,7 +197,6 @@ export function MusicProvider({ children }: { children: ReactNode }) {
     }
   };
 
-  // 🌟 6. 暴露直接播放指定歌曲的方法
   const playSong = (index: number) => {
     setCurrentIndex(index);
     if (!isPlaying) setIsPlaying(true);
@@ -213,7 +218,6 @@ export function MusicProvider({ children }: { children: ReactNode }) {
     }
   };
 
-  // 🌟 7. 处理歌曲结束
   const handleEnded = () => {
     if (playMode === 'single' && audioRef.current) {
        audioRef.current.currentTime = 0;
