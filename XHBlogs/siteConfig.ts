@@ -49,7 +49,7 @@ export const siteConfig = {
   danmakuList: ["在干嘛呢？", "有笨蛋嘛？", "前方高能反应！", "GROMACS 跑起来了吗？", "MD 模拟什么时候才能出图啊", "Graph Neural Networks 炼丹中...", "BUG 修复进度 99%", "今天背单词了吗？", "Tailwind CSS 拯救前端", "写算法中", "睡大觉中", "到底在干嘛？"],
   gitalkConfig: {
     clientID: "0v23lioggs35RtFXyJ9u",
-    clientSecret: "8e1922ac12825f4a588fcd6c961fcc3e76594469",
+    clientSecret: "e0b34d738b924a6de4bcfa11644e87decbca612",
     repo: "XHBlogs",
     owner: "wxidqlvk",
     admin: ["wxidqlvk"],
