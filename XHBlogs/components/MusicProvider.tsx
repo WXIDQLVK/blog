@@ -82,13 +82,13 @@ export function MusicProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     let isMounted = true;
     
-    // 🎵 本地音乐配置（已更新包含四首歌，请确保所有文件名均为小写）
+    // 🎵 本地音乐配置（包含所有四首歌及其独立封面、音频、歌词）
     const localPlaylist = [
       {
         id: "1",
         title: "无名的人",
         artist: "毛不易",
-        cover: "/69c1e38ac1846.jpg",     
+        cover: "/wuming.jpg",            
         src: "/wuming.mp3",               
         lrcUrl: "/wuming.lrc",            
         lyrics: []
