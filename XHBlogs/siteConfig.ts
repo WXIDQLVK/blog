@@ -2,7 +2,7 @@
 
 export const siteConfig = {
   // 1. 网站标题与博主信息
-  title: "子杰 の 宝藏之地",
+  title: "个人博客",
   faviconUrl: "/69c1e38ac1846.jpg",
   authorName: "谢子杰",
   bio: "在代码、学术与分子动力学模拟间穿梭的普通人。近期正埋头于 GROMACS 模拟研究与神经网络计算。",
