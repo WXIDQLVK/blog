@@ -12,9 +12,9 @@ export type Project = {
 export const projectsData: Project[] = [
   {
     "id": "proj_1775049332705",
-    "name": "Computational Chemistry Tool",
-    "githubUrl": "https://github.com/heiehiehi/Computational_Chemistry_Tool",
-    "description": "该工具本作者使用在Win下的WSL2平台，系统为Ubuntu22，个人使用请依据自己数据进行修改（这些工具只是整合了一些流程）",
+    "name": "Apple WLOC-Spoofer",
+    "githubUrl": "https://github.com/WXIDQLVK/wloc-spoofer",
+    "description": "Apple WLOC是一款研究Apple无线定位系统的工具,用于分析iOS定位数据与Wi-Fi定位机制",
     "icon": "🚀",
     "tags": [
       "Gromacs",
