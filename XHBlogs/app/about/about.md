@@ -11,13 +11,7 @@ description: ''
 
 你好，我是谢子杰
 
-爱好和特长有很多，擅长
-word、excel、ppt、wind等
-软件的安装与卸载，精通
-PE、PS、PB、DCF、PEG
-等单词的拼写，熟悉
-Windows、Linux、Mac、
-Android、IOS、WP8等系统
-的开关机。
+爱好和特长有很多，擅长word、excel、ppt、wind等软件的安装与卸载，精通PE、PS、PB、DCF、PEG等单词的拼写，熟悉Windows、Linux、Mac、
+Android、IOS、WP8等系统的开关机。
 
 **欢迎各位朋友联系交流~**
