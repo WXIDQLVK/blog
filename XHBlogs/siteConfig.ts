@@ -5,7 +5,7 @@ export const siteConfig = {
   title: "个人博客",
   faviconUrl: "/69c1e38ac1846.jpg",
   authorName: "谢子杰",
-  bio: "在代码、学术与分子动力学模拟间穿梭的普通人。近期正埋头于 GROMACS 模拟研究与神经网络计算。",
+  bio: "热爱苹果生态与前沿应用开发的普通人，致力打造兼具性能与优秀体验的软件工具",
 
   navTitle: "谢子杰",
 
@@ -31,8 +31,8 @@ export const siteConfig = {
   photoWallImage: "https://bu.dusays.com/2026/03/24/69c1e38b4c370.jpg",
   cloudMusicIds: ["1809646618", "3361076230", "1859390262"],
   social: {
-    github: "wxidqlvk",
-    gitee: "wxidqlvk",
+    github: "https://github.com/wxidqlvk",
+    gitee: "https://github.com/wxidqlvk",
     google: "ficocamell650@gamil.com",
     email: "q663397592@icloud.com",
     qq: "663397592",
