@@ -14,7 +14,7 @@ export const projectsData: Project[] = [
     "id": "proj_1775049332705",
     "name": "Apple WLOC Spoofer",
     "githubUrl": "https://github.com/WXIDQLVK/wloc-spoofer",
-    "description": "Apple WLOC 是一款用于研究和管理Apple定位数据的工具，围绕iOS系统中的无线定位（Wi-Fi Location）机制展开，帮助用户查看、分析相关定位信息，探索苹果设备定位服务的工作方式。",
+    "description": "Apple WLOC是一款用于研究和管理Apple定位数据的工具，围绕iOS系统中的无线定位（Wi-Fi Location）机制展开，帮助用户查看、分析相关定位信息，探索苹果设备定位服务的工作方式。",
     "icon": "🚀",
     "tags": [
       "Gromacs",
