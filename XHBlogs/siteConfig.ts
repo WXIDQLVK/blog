@@ -7,12 +7,12 @@ export const siteConfig = {
   authorName: "玩家名六个字",
   bio: "热爱苹果生态与前沿应用开发的普通人，致力打造兼具性能与优秀体验的软件工具",
 
-  navTitle: "玩家名六个字",
+  navTitle: "个人",
 
   // 👇 【新增】导航栏中间的那个后缀/分隔符（默认是 の）
   navSuffix: "の",
 
-  navAfter: "宝藏之地",
+  navAfter: "博客",
 
   // 2. 头像设置 (支持网络链接，或将图片放入 public 文件夹后使用 "/me.jpg")
   avatarUrl: "/69c1e38ac1846.jpg",
