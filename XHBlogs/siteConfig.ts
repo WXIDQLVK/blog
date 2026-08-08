@@ -51,8 +51,9 @@ export const siteConfig = {
     repo: "wxidqlvk.github.io",
     owner: "wxidqlvk",
     admin: ["wxidqlvk"],
-    id: "about", // 👈 强制锁死用这个 id 作为唯一标识，彻底解决 405
-    distractionFreeMode: false, // 👈 防止全屏模式冲突
+    // 移除死 id，改为让组件自动读取当前页面的 pathname，确保每个页面独立且不报错
+    id: typeof window !== 'undefined' ? window.location.pathname : 'about',
+    distractionFreeMode: false, 
   },
 
   buildDate: "2026-03-23T00:00:00", // 建站日期
